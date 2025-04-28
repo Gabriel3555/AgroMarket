@@ -73,7 +73,6 @@ export default function Home() {
         </div>
       </div>
 
-      {/* Rest of the page content remains unchanged */}
       {/* Hero Section */}
       <section className="container mx-auto px-4 py-8">
         <div className="grid md:grid-cols-2 gap-8 items-center">
@@ -211,9 +210,9 @@ export default function Home() {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {/* Product 1 */}
-          <Card className="overflow-hidden">
+          <Card className="overflow-hidden h-full flex flex-col">
             <div className="relative">
-              <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+              <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded z-10">
                 20% OFF
               </div>
               <div className="h-48 flex items-center justify-center p-4 bg-gray-50">
@@ -226,15 +225,15 @@ export default function Home() {
                 />
               </div>
             </div>
-            <CardContent className="p-4">
+            <CardContent className="p-4 flex-grow flex flex-col">
               <h3 className="font-semibold mb-1">Paquete de Semillas MIX</h3>
               <div className="flex items-baseline mb-2">
                 <span className="text-lg font-bold">$124.99</span>
                 <span className="text-sm text-gray-500 line-through ml-2">$129.99</span>
               </div>
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center mt-auto">
                 <StarRating rating={4} totalReviews={23} />
-                <button className="text-gray-500">
+                <button className="text-gray-500 hover:text-green-600 transition-colors">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -256,9 +255,9 @@ export default function Home() {
           </Card>
 
           {/* Product 2 */}
-          <Card className="overflow-hidden">
+          <Card className="overflow-hidden h-full flex flex-col">
             <div className="relative">
-              <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+              <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded z-10">
                 13% OFF
               </div>
               <div className="h-48 flex items-center justify-center p-4 bg-gray-50">
@@ -271,15 +270,15 @@ export default function Home() {
                 />
               </div>
             </div>
-            <CardContent className="p-4">
+            <CardContent className="p-4 flex-grow flex flex-col">
               <h3 className="font-semibold mb-1">Fertilizante Orgánico</h3>
               <div className="flex items-baseline mb-2">
                 <span className="text-lg font-bold">$149.99</span>
                 <span className="text-sm text-gray-500 line-through ml-2">$159.99</span>
               </div>
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center mt-auto">
                 <StarRating rating={4} totalReviews={19} />
-                <button className="text-gray-500">
+                <button className="text-gray-500 hover:text-green-600 transition-colors">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -301,30 +300,30 @@ export default function Home() {
           </Card>
 
           {/* Product 3 */}
-          <Card className="overflow-hidden">
+          <Card className="overflow-hidden h-full flex flex-col">
             <div className="relative">
-              <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+              <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded z-10">
                 25% OFF
               </div>
-              <div className="h-64 flex items-center justify-center p-2 bg-gray-50">
+              <div className="h-48 flex items-center justify-center p-4 bg-gray-50">
                 <Image
                   src="/images/tools.png"
                   alt="Kit de Herramientas Deluxe"
-                  width={280}
-                  height={280}
-                  className="object-contain"
+                  width={250}
+                  height={250}
+                  className="object-contain h-full"
                 />
               </div>
             </div>
-            <CardContent className="p-4">
+            <CardContent className="p-4 flex-grow flex flex-col">
               <h3 className="font-semibold mb-1">Kit de Herramientas Deluxe</h3>
               <div className="flex items-baseline mb-2">
                 <span className="text-lg font-bold">$179.99</span>
                 <span className="text-sm text-gray-500 line-through ml-2">$199.99</span>
               </div>
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center mt-auto">
                 <StarRating rating={4} totalReviews={15} />
-                <button className="text-gray-500">
+                <button className="text-gray-500 hover:text-green-600 transition-colors">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -346,34 +345,37 @@ export default function Home() {
           </Card>
 
           {/* Product 4 */}
-          <Card className="overflow-hidden">
+          <Card className="overflow-hidden h-full flex flex-col">
             <div className="relative">
-              <div className="h-64 flex items-center justify-center p-2 bg-gray-50">
+              <div className="absolute top-2 left-2 bg-green-500 text-white text-xs font-bold px-2 py-1 rounded z-10">
+                NUEVO
+              </div>
+              <div className="h-48 flex items-center justify-center p-4 bg-gray-50">
                 <Link href="/producto/sistema-riego-automatico">
                   <Image
                     src="/images/irrigation.png"
                     alt="Sistema de Riego Automático"
-                    width={280}
-                    height={280}
-                    className="object-contain"
+                    width={250}
+                    height={250}
+                    className="object-contain h-full"
                   />
                 </Link>
               </div>
             </div>
-            <CardContent className="p-4">
+            <CardContent className="p-4 flex-grow flex flex-col">
               <Link href="/producto/sistema-riego-automatico" className="hover:text-green-600">
                 <h3 className="font-semibold mb-1">Sistema de Riego Automático</h3>
               </Link>
               <div className="flex items-baseline mb-2">
                 <span className="text-lg font-bold">$189.99</span>
               </div>
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center mt-auto">
                 <StarRating rating={4} totalReviews={30} />
-                <button className="text-gray-500">
+                <button className="text-gray-500 hover:text-green-600 transition-colors">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
-                    width="25"
-                    height="25"
+                    width="20"
+                    height="20"
                     viewBox="0 0 24 24"
                     fill="none"
                     stroke="currentColor"

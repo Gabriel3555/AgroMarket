@@ -107,9 +107,9 @@ export default function SistemasRiegoPage() {
         {/* Products Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {/* Product 1 */}
-          <Card className="overflow-hidden hover:shadow-lg transition-shadow animate-fadeIn">
+          <Card className="overflow-hidden h-full flex flex-col hover:shadow-lg transition-shadow animate-fadeIn">
             <div className="relative">
-              <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+              <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded z-10">
                 20% OFF
               </div>
               <div className="h-48 flex items-center justify-center p-4 bg-gray-50">
@@ -124,7 +124,7 @@ export default function SistemasRiegoPage() {
                 </Link>
               </div>
             </div>
-            <CardContent className="p-4">
+            <CardContent className="p-4 flex-grow flex flex-col">
               <Link href="/producto/sistema-riego-automatico" className="hover:text-green-600 transition-colors">
                 <h3 className="font-semibold mb-1">Sistema de Riego Automático</h3>
               </Link>
@@ -132,7 +132,7 @@ export default function SistemasRiegoPage() {
                 <span className="text-lg font-bold">$49.99</span>
                 <span className="text-sm text-gray-500 line-through ml-2">$59.99</span>
               </div>
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center mt-auto">
                 <StarRating rating={4} totalReviews={27} />
                 <button className="text-gray-500 hover:text-green-600 transition-colors">
                   <svg
@@ -155,7 +155,7 @@ export default function SistemasRiegoPage() {
             </CardContent>
           </Card>
 
-          {/* More products would follow here */}
+          {/* Puedes agregar más productos aquí siguiendo el mismo patrón */}
         </div>
       </main>
 

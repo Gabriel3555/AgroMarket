@@ -107,9 +107,9 @@ export default function FertilizantesPage() {
         {/* Products Grid */}
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
           {/* Product 1 */}
-          <Card className="overflow-hidden">
+          <Card className="overflow-hidden h-full flex flex-col">
             <div className="relative">
-              <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+              <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded z-10">
                 10% OFF
               </div>
               <div className="h-48 flex items-center justify-center p-4 bg-gray-50">
@@ -122,15 +122,15 @@ export default function FertilizantesPage() {
                 />
               </div>
             </div>
-            <CardContent className="p-4">
+            <CardContent className="p-4 flex-grow flex flex-col">
               <h3 className="font-semibold mb-1">Fertilizante Orgánico Premium</h3>
               <div className="flex items-baseline mb-2">
                 <span className="text-lg font-bold">$29.99</span>
                 <span className="text-sm text-gray-500 line-through ml-2">$32.99</span>
               </div>
-              <div className="flex justify-between items-center">
+              <div className="flex justify-between items-center mt-auto">
                 <StarRating rating={5} totalReviews={42} />
-                <button className="text-gray-500">
+                <button className="text-gray-500 hover:text-green-600 transition-colors">
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     width="20"
@@ -151,7 +151,7 @@ export default function FertilizantesPage() {
             </CardContent>
           </Card>
 
-          {/* More products would follow here */}
+          {/* Puedes agregar más productos aquí siguiendo el mismo patrón */}
         </div>
       </main>
 

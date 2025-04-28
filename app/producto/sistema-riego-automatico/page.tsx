@@ -527,9 +527,9 @@ export default function ProductDetail() {
           <h2 className="text-2xl font-bold mb-6">Productos similares</h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {/* Product 1 */}
-            <Card className="overflow-hidden">
+            <Card className="overflow-hidden flex flex-col h-full">
               <div className="relative">
-                <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+                <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded z-10">
                   25% OFF
                 </div>
                 <div className="h-48 flex items-center justify-center p-4 bg-gray-50">
@@ -542,11 +542,13 @@ export default function ProductDetail() {
                   />
                 </div>
               </div>
-              <CardContent className="p-4">
-                <h3 className="font-semibold mb-1">Kit de Herramientas Deluxe</h3>
-                <div className="flex items-baseline mb-2">
-                  <span className="text-lg font-bold">$24.99</span>
-                  <span className="text-sm text-gray-500 line-through ml-2">$29.99</span>
+              <CardContent className="p-4 flex flex-col justify-between">
+                <div>
+                  <h3 className="font-semibold mb-1">Kit de Herramientas Deluxe</h3>
+                  <div className="flex items-baseline mb-2">
+                    <span className="text-lg font-bold">$24.99</span>
+                    <span className="text-sm text-gray-500 line-through ml-2">$29.99</span>
+                  </div>
                 </div>
                 <div className="flex justify-between items-center">
                   <StarRating rating={4} totalReviews={23} />
@@ -572,9 +574,9 @@ export default function ProductDetail() {
             </Card>
 
             {/* Product 2 */}
-            <Card className="overflow-hidden">
+            <Card className="overflow-hidden flex flex-col h-full">
               <div className="relative">
-                <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+                <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded z-10">
                   20% OFF
                 </div>
                 <div className="h-48 flex items-center justify-center p-4 bg-gray-50">
@@ -587,11 +589,13 @@ export default function ProductDetail() {
                   />
                 </div>
               </div>
-              <CardContent className="p-4">
-                <h3 className="font-semibold mb-1">Sistema de Riego Automático</h3>
-                <div className="flex items-baseline mb-2">
-                  <span className="text-lg font-bold">$24.99</span>
-                  <span className="text-sm text-gray-500 line-through ml-2">$27.99</span>
+              <CardContent className="p-4 flex flex-col justify-between">
+                <div>
+                  <h3 className="font-semibold mb-1">Sistema de Riego Automático</h3>
+                  <div className="flex items-baseline mb-2">
+                    <span className="text-lg font-bold">$24.99</span>
+                    <span className="text-sm text-gray-500 line-through ml-2">$27.99</span>
+                  </div>
                 </div>
                 <div className="flex justify-between items-center">
                   <StarRating rating={4} totalReviews={23} />
@@ -617,9 +621,9 @@ export default function ProductDetail() {
             </Card>
 
             {/* Product 3 */}
-            <Card className="overflow-hidden">
+            <Card className="overflow-hidden flex flex-col h-full">
               <div className="relative">
-                <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded">
+                <div className="absolute top-2 left-2 bg-red-500 text-white text-xs font-bold px-2 py-1 rounded z-10">
                   40% OFF
                 </div>
                 <div className="h-48 flex items-center justify-center p-4 bg-gray-50">
@@ -632,11 +636,13 @@ export default function ProductDetail() {
                   />
                 </div>
               </div>
-              <CardContent className="p-4">
-                <h3 className="font-semibold mb-1">Estación Meteorológica</h3>
-                <div className="flex items-baseline mb-2">
-                  <span className="text-lg font-bold">$24.99</span>
-                  <span className="text-sm text-gray-500 line-through ml-2">$39.99</span>
+              <CardContent className="p-4 flex flex-col justify-between">
+                <div>
+                  <h3 className="font-semibold mb-1">Estación Meteorológica</h3>
+                  <div className="flex items-baseline mb-2">
+                    <span className="text-lg font-bold">$24.99</span>
+                    <span className="text-sm text-gray-500 line-through ml-2">$39.99</span>
+                  </div>
                 </div>
                 <div className="flex justify-between items-center">
                   <StarRating rating={4} totalReviews={23} />

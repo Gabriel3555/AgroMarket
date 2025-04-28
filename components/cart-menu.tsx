@@ -4,15 +4,7 @@ import { useState } from "react"
 import Image from "next/image"
 import { ShoppingCart, Trash2, Plus, Minus } from "lucide-react"
 import { Button } from "@/components/ui/button"
-import {
-  Sheet,
-  SheetContent,
-  SheetDescription,
-  SheetFooter,
-  SheetHeader,
-  SheetTitle,
-  SheetTrigger,
-} from "@/components/ui/sheet"
+import { Sheet, SheetContent, SheetDescription, SheetHeader, SheetTitle, SheetTrigger } from "@/components/ui/sheet"
 
 interface CartItem {
   id: string
@@ -157,32 +149,34 @@ export function CartMenu() {
         </div>
 
         {cartItems.length > 0 && (
-          <SheetFooter className="flex-col space-y-4 border-t pt-4">
+          <div className="border-t pt-4 space-y-4">
             <div className="space-y-2">
               <div className="flex justify-between text-sm">
-                <span>Subtotal</span>
+                <span>Subtotal:</span>
                 <span>${subtotal.toFixed(2)}</span>
               </div>
               <div className="flex justify-between text-sm">
-                <span>Envío</span>
-                <span className="text-right">
-                  Calculado al
-                  <br />
-                  finalizar
-                </span>
+                <span>Envío:</span>
+                <span>Calculado al finalizar</span>
               </div>
               <div className="flex justify-between font-medium">
-                <span>Total estimado</span>
+                <span>Total estimado:</span>
                 <span>${subtotal.toFixed(2)}</span>
               </div>
             </div>
-            <Button className="w-full bg-green-600 hover:bg-green-700 transition-colors btn-hover-effect">
-              Finalizar compra
-            </Button>
-            <Button variant="outline" onClick={() => setIsOpen(false)} className="transition-colors hover:bg-green-50">
-              Seguir comprando
-            </Button>
-          </SheetFooter>
+            <div className="flex flex-col gap-2">
+              <Button className="w-full bg-green-600 hover:bg-green-700 transition-colors btn-hover-effect">
+                Finalizar compra
+              </Button>
+              <Button
+                variant="outline"
+                onClick={() => setIsOpen(false)}
+                className="transition-colors hover:bg-green-50"
+              >
+                Seguir comprando
+              </Button>
+            </div>
+          </div>
         )}
       </SheetContent>
     </Sheet>
